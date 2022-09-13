@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: url("./assets/interior-design-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.call-icon {
+  width: 40px;
+}
+
+.puzzle img {
+  width: 40px;
+}
+
+.light img {
+  width: 40px;
+}
+
+/* ---------------- NAVBAR STYLING ---------------- */
+
+nav {
+  display: flex;
+  padding: 20px 60px;
+  justify-content: space-between;
+}
+
+.nav-start img {
+  width: 130px;
+  padding-top: 3px;
+}
+
+.nav-right {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-right::after {
+  content: "";
+  position: absolute;
+  width: 938px;
+  width: 60%;
+  top: 90px;
+  right: 60px;
+  height: 2px;
+  background-color: white;
+}
+
+.nav-mid {
+  display: flex;
+  width: 70%;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 20px;
+}
+
+.list-items {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.ham {
+  display: none;
+}
+
+.nav-mid a {
+  text-decoration: none;
+}
+
+.nav-end {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-end span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav-end span:first-child {
+  margin-bottom: 2px;
+}
+
+/* --------------- MAIN CONTENT --------------- */
+
+.puzzle {
+  position: absolute;
+  width: 260px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #30485b;
+  right: 120px;
+  top: 160px;
+  padding: 20px;
+}
+
+.puzzle-container {
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 5px 25px;
+  background-color: white;
+  margin-bottom: 15px;
+}
+
+.puzzle-container img {
+  width: 30px;
+}
+
+.puzzle p {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.puzzle > img {
+  transform: rotate(90deg);
+  position: absolute;
+  width: 60px;
+  top: 175px;
+  right: 25px;
+}
+
+.light {
+  position: absolute;
+  width: 260px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #30485b;
+  top: 400px;
+  right: 350px;
+  padding: 20px;
+}
+
+.light-container {
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 5px 25px;
+  background-color: white;
+  margin-bottom: 15px;
+}
+
+.light-container img {
+  width: 30px;
+}
+
+.light p {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.light > img {
+  position: absolute;
+  width: 60px;
+  top: 50px;
+  right: -60px;
+}
+
+/* ----------------- MAIN HEADING ----------------- */
+
+.heading {
+  width: 60%;
+  margin-top: 120px;
+  margin-left: 100px;
+}
+
+.heading h1 {
+  font-size: 60px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.btn {
+  width: 200px;
+  margin-left: 100px;
+  margin-top: 40px;
+}
+
+button {
+  background-color: transparent;
+  border: 3px solid white;
+  padding: 15px 38px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1050px) {
+  .nav-right {
+    border: 2px solid white;
+    display: none;
+  }
+
+  .ham {
+    display: block;
+    width: 50px;
+  }
+
+  .heading {
+    width: 70%;
+    margin: 40px auto;
+  }
+
+  .heading h1 {
+    text-align: center;
+  }
+
+  .btn {
+    margin: 0px auto;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .puzzle,
+  .light {
+    position: initial;
+  }
+
+  .box {
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  nav {
+    padding: 20px 30px;
+  }
+
+  .nav-start img {
+    width: 100px;
+    padding-top: 3px;
+  }
+
+  .nav-right {
+    display: none;
+  }
+
+  .ham {
+    display: block;
+    width: 40px;
+  }
+
+  .heading {
+    padding: 0px 30px;
+    width: 100%;
+    margin: 40px auto;
+  }
+
+  .heading h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .box {
+    padding: 0px 40px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 780px) {
+  .heading {
+    padding: 0px 30px;
+    width: 70%;
+    margin: 40px auto;
+  }
+}
